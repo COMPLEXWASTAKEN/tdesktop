@@ -1,28 +1,13 @@
-name: Build Unlimited Accounts
+name: Windows x64
 
 on:
   push:
     branches:
       - dev
-      - master
-      - main
-    paths-ignore:
-      - 'docs/**'
-      - '**.md'
-      - 'changelog.txt'
-      - 'LEGAL'
-      - 'LICENSE'
-  pull_request:
-    paths-ignore:
-      - 'docs/**'
-      - '**.md'
-      - 'changelog.txt'
-      - 'LEGAL'
-      - 'LICENSE'
   workflow_dispatch:
 
 jobs:
-  windows:
+  windows-x64:
     name: Windows x64
     runs-on: windows-latest
 
@@ -136,5 +121,5 @@ jobs:
       - uses: actions/upload-artifact@v4
         name: Upload artifact.
         with:
-          name: Telegram-Unlimited-x64-Debug
+          name: Telegram-x64-Debug
           path: artifact\
